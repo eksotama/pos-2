@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using SQLite;
+﻿using SQLite;
 
 namespace pos
 {
-    class Sell
+    public class Sell : Model<Sell>
     {
-        [PrimaryKey]
-        [AutoIncrement]
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
     }
 }

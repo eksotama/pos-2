@@ -1,28 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using SQLite;
 
 namespace pos
 {
-    public class Product
+    public class Product : Model<Product>
     {
-        public string Name;
 
-        public string Photo_Url;
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
 
-        public int Quantity;
+        public string Name { get; set; }
 
-        public float Price;
+        public string Photo_Url { get; set; }
 
-        public float Cost;
+        public int Quantity { get; set; }
 
-        public static Product Get(string id)
-        {
-            return new Product();
-        }
-        public static List<Product> Get_All()
-        {
-            return new List<Product>();
-        }
+        public float Price { get; set; }
+
+        public float Cost { get; set; }
     }
 }
