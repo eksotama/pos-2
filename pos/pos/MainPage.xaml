@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="pos.MainPage"
+             Title="POS">
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Button Text="Clientes" Clicked="Go_To_Clients_List_Page"/>
+        <Button Text="Productos" Clicked="Go_To_Products_List_Page"/>
+        <Button Text="Ventas" Clicked="Go_To_Sells_Page"/>
+        <Button Text="Reportes" Clicked="Go_To_Reports_Page"/>
+    </StackLayout>
+
+</ContentPage>

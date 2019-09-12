@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="pos.ClientForm">
+    
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <Label Text="Nombre"/>
+            <Entry Placeholder="Nombre" x:Name="Name_Entry"/>
+
+            <Label Text="Direccion"/>
+            <Entry Placeholder="Direccion" x:Name="Name_Entry"/>
+            
+            <Label Text="Telefono"/>
+            <Entry Placeholder="Telefono" x:Name="Name_Entry"/>
+
+            <Label Text="Email"/>
+            <Entry Placeholder="Email" x:Name="Name_Entry"/>
+
+            <Label Text="Foto de perfil"/>
+            <Entry Placeholder="Foto" x:Name="Name_Entry"/>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
