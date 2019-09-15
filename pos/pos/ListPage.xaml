@@ -5,11 +5,31 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="pos.ListPage">
+
     <ContentPage.Content>
+
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="Items_List">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding Photo_Path}"/>
+                                <StackLayout>
+                                    <Label Text="{Binding Title}"/>
+                                    <Label Text="{Binding Detail}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="20">
+                <Button Text="+" FontSize="Title" Clicked="Add_Item" HeightRequest="60" WidthRequest="60" CornerRadius="30" BackgroundColor="Accent" TextColor="White"/>
+            </StackLayout>
         </StackLayout>
+
     </ContentPage.Content>
+
 </ContentPage>

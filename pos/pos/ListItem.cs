@@ -6,7 +6,7 @@ namespace pos
 {
     public class ListItem
     {
-        public string Photo_Url;
+        public string Photo_Path;
 
         public string Title;
 

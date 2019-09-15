@@ -16,5 +16,10 @@ namespace pos
         {
             InitializeComponent();
         }
+
+        private void Register_Client(object sender, EventArgs e)
+        {
+
+        }
     }
 }
