@@ -17,9 +17,25 @@ namespace pos
             InitializeComponent();
         }
 
-        private void Register_Client(object sender, EventArgs e)
+        private async void Register_Client(object sender, EventArgs e)
         {
+            string name = Name_Entry.Text;
+            string address = Address_Entry.Text;
+            string phone = Phone_Entry.Text;
+            string email = Email_Entry.Text;
+            string photo = Phone_Entry.Text;
 
+            Client client = new Client
+            {
+                Name = name,
+                Address = address,
+                Phone = phone,
+                Email = email,
+                Profile_Url = photo
+            };
+
+            client.Insert();
+            await Application.Current.MainPage.Navigation.PopAsync();
         }
     }
 }

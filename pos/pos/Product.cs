@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using SQLite;
+﻿using SQLite;
 
 namespace pos
 {

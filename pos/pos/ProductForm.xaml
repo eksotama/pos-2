@@ -6,10 +6,20 @@
              mc:Ignorable="d"
              x:Class="pos.ProductForm">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+        <StackLayout Margin="30">
+            <Entry Placeholder="Nombre del Producto" FontSize="Medium" x:Name="Name_Entry" />
+
+            <Entry Placeholder="Costo" FontSize="Medium" x:Name="Cost_Entry" Keyboard="Numeric"/>
+
+            <Entry Placeholder="Precio" FontSize="Medium" x:Name="Price_Entry" Keyboard="Numeric"/>
+
+            <Entry Placeholder="Cantidad en existencia" FontSize="Medium" x:Name="Quantity_Entry" Keyboard="Numeric"/>
+            
+            <Entry Placeholder="Foto" FontSize="Medium" x:Name="Photo_Entry"/>
+
+            <Button Text="Registrar" Clicked="Register_Product" BackgroundColor="Accent" TextColor="White"/>
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

@@ -16,15 +16,15 @@ namespace pos
 
         private async void Go_To_Clients_List_Page(object sender, EventArgs e)
         {
-            List<ListItem> items = Client.Get_All().ConvertAll(client => new ListItem { Photo_Path = client.Profile_Url, Title = client.Name });
-            Console.WriteLine(items.Count);
-            var page = new ListPage(items, typeof(ClientForm), typeof(ClientDetail), "Clientes");
+            Func<List<ListItem>> getClients = () => Client.Get_All().ConvertAll(client => new ListItem { Photo_Path = client.Profile_Url, Title = client.Name, Detail = client.Phone });
+            var page = new ListPage(getClients, typeof(ClientForm), typeof(ClientDetail), "Clientes");
             await Navigation.PushAsync(page);
         }
 
         private async void Go_To_Products_List_Page(object sender, EventArgs e)
         {
-            var page = new ListPage(new List<ListItem>(), typeof(ProductForm), typeof(ProductDetail), "Productos");
+            Func<List<ListItem>> getProducts = () => Product.Get_All().ConvertAll(product => new ListItem { Photo_Path = product.Photo_Url, Title = product.Name, Detail = product.Price });
+            var page = new ListPage(getProducts, typeof(ProductForm), typeof(ProductDetail), "Productos");
             await Navigation.PushAsync(page);
         }
 

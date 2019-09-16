@@ -13,28 +13,28 @@ namespace pos
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListPage : ContentPage
     {
-        private Type Add_Item_Page;
+        private Type Add_Item_Page { get; set; }
 
-        private Type Detail_Item_Page;
+        private Type Detail_Item_Page { get; set; }
 
-        private string TitleString;
+        private string TitleString { get; set; }
 
-        public ListPage(List<ListItem> items, Type addItemPage, Type detailItemPage, string title)
+        private Func<List<ListItem>> Getter { get; set; }
+
+        public ListPage(Func<List<ListItem>> getterFunc, Type addItemPage, Type detailItemPage, string title)
         {
-            if (items.Count > 0)
-            {
-                Items_List.ItemsSource = new ObservableCollection<ListItem>(items);
-            }
-
+            Getter = getterFunc;
             Add_Item_Page = addItemPage;
             Detail_Item_Page = detailItemPage;
             TitleString = title;
+            BindingContext = this;
             InitializeComponent();
         }
 
         protected override void OnAppearing()
         {
             Title = TitleString;
+            Items_List.ItemsSource = Getter();
         }
 
         private async void Add_Item(object sender, EventArgs e)

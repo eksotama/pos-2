@@ -6,10 +6,10 @@ namespace pos
 {
     public class ListItem
     {
-        public string Photo_Path;
+        public string Photo_Path { get; set; }
 
-        public string Title;
+        public string Title { get; set; }
 
-        public string Detail = "";
+        public dynamic Detail { get; set; }
     }
 }

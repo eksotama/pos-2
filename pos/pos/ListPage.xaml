@@ -9,14 +9,14 @@
     <ContentPage.Content>
 
         <StackLayout>
-            <ListView x:Name="Items_List">
+            <ListView x:Name="Items_List" HasUnevenRows="True" Margin="10">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="{Binding Photo_Path}"/>
                                 <StackLayout>
-                                    <Label Text="{Binding Title}"/>
+                                    <Label Text="{Binding Title}" TextColor="Black"/>
                                     <Label Text="{Binding Detail}"/>
                                 </StackLayout>
                             </StackLayout>
