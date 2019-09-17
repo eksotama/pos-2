@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Media;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,6 +47,20 @@ namespace pos
 
             product.Insert();
             await Application.Current.MainPage.Navigation.PopAsync();
+        }
+
+        private async void TakePicture_Clicked(object sender, EventArgs e)
+        {
+            var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
+            {
+                Directory = "Products",
+                Name = "idxd.jpg"
+            });
+
+            if (file == null)
+                return;
+
+            await DisplayAlert("File Location", file.Path, "OK");
         }
     }
 }
