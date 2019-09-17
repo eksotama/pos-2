@@ -1,6 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace pos
 {
@@ -19,6 +17,7 @@ namespace pos
 
             db.CreateTable<Product>();
             db.CreateTable<Client>();
+            db.CreateTable<Sell>();
 
             db.Close();
         }

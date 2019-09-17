@@ -9,7 +9,7 @@
     <ContentPage.Content>
 
         <StackLayout>
-            <ListView x:Name="Items_List" HasUnevenRows="True" Margin="10">
+            <ListView x:Name="Items_List" HasUnevenRows="True" Margin="10" ItemTapped="Get_Detail_Item">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

@@ -23,7 +23,7 @@ namespace pos
             string address = Address_Entry.Text;
             string phone = Phone_Entry.Text;
             string email = Email_Entry.Text;
-            string photo = Phone_Entry.Text;
+            string photo = Photo_Entry.Text;
 
             Client client = new Client
             {

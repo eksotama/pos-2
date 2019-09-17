@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using System;
+using SQLite;
 
 namespace pos
 {
@@ -14,5 +15,7 @@ namespace pos
         public int Amount { get; set; }
 
         public float Total { get; set; }
+
+        public DateTime Timestamp { get; set; }
     }
 }

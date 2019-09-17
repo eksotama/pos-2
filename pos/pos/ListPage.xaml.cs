@@ -42,5 +42,14 @@ namespace pos
             var page = Activator.CreateInstance(Add_Item_Page);
             await Navigation.PushAsync((ContentPage)page);
         }
+
+        private async void Get_Detail_Item(object sender, ItemTappedEventArgs e)
+        {
+            var itemsList = (ListView)sender;
+            ListItem item = (ListItem)itemsList.SelectedItem;
+
+            var page = Activator.CreateInstance(Detail_Item_Page, item.Id);
+            await Navigation.PushAsync((ContentPage)page);
+        }
     }
 }
