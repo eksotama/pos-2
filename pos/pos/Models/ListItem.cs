@@ -12,5 +12,15 @@ namespace pos
         public string Title { get; set; }
 
         public dynamic Detail { get; set; }
+
+        public int Client_Id { get; set; }
+
+        public int Product_Id { get; set; }
+
+        public int Amount { get; set; }
+
+        public float Total { get; set; }
+
+        public DateTime Timestamp { get; set; }
     }
 }

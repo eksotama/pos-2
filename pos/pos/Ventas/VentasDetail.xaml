@@ -4,9 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="pos.ClientDetail"
-             Title="Detalle de Cliente">
-
+             x:Class="pos.Ventas.VentasDetail">
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="MenuItem1" Order="Primary" Icon="tick.png" Text="Guardar" Priority="0" Clicked="Update_Client" />
         <ToolbarItem Name="MenuItem1" Order="Primary" Icon="delete.png" Text="Borrar" Priority="1" Clicked="Delete_Client" />
@@ -51,5 +49,4 @@
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
-
 </ContentPage>

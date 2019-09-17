@@ -30,7 +30,9 @@ namespace pos
 
         private async void Go_To_Sells_Page(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Reports());
+            Func<List<ListItem>> getVentas = () => Sell.Get_All().ConvertAll(venta => new ListItem { Id = venta.Id, Title = venta.Timestamp.ToString(), Detail = venta.Total,  });
+            var page = new ListPage(getVentas, typeof(Ventas.VentasForm), typeof(Ventas.VentasDetail), "Ventas");
+            await Navigation.PushAsync(page);
         }
 
         private async void Go_To_Reports_Page(object sender, EventArgs e)
