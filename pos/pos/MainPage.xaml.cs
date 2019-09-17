@@ -30,7 +30,7 @@ namespace pos
 
         private async void Go_To_Sells_Page(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Reports());
+            //await Navigation.PushAsync(new Reports());
         }
 
         private async void Go_To_Reports_Page(object sender, EventArgs e)
