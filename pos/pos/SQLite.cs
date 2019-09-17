@@ -12,7 +12,6 @@ namespace pos
         {
             string folder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
             string dbPath = Path.Combine(folder, "pos.db");
-
             return new SQLiteConnection(dbPath);
         }
     }

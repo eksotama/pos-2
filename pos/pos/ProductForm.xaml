@@ -17,6 +17,7 @@
             <Entry Placeholder="Cantidad en existencia" FontSize="Medium" x:Name="Quantity_Entry" Keyboard="Numeric"/>
             
             <Entry Placeholder="Foto" FontSize="Medium" x:Name="Photo_Entry"/>
+            <Button x:Name="TakePicture" Text="Tomar Foto" Clicked="TakePicture_Clicked"
 
             <Button Text="Registrar" Clicked="Register_Product" BackgroundColor="Accent" TextColor="White"/>
         </StackLayout>
