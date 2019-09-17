@@ -19,6 +19,7 @@ namespace pos
 
             db.CreateTable<Product>();
             db.CreateTable<Client>();
+            db.CreateTable<Sell>();
 
             db.Close();
         }
