@@ -46,7 +46,7 @@ namespace pos
             }
         }
 
-        public static T Get(string id)
+        public static T Get(int id)
         {
             var db = PosDb.Connect();
             T records = db.Find<T>(id);
