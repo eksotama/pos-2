@@ -60,7 +60,8 @@ namespace pos
             if (file == null)
                 return;
 
-            await DisplayAlert("File Location", file.Path, "OK");
+            Profile.Source = file.Path;
+            Photo_Entry.Text = file.Path;
         }
     }
 }
