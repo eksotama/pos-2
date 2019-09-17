@@ -14,8 +14,8 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
-                                <Image Source="{Binding Photo_Path}"/>
-                                <StackLayout>
+                                <Image Source="{Binding Photo_Path}" WidthRequest="70"/>
+                                <StackLayout Margin="20">
                                     <Label Text="{Binding Title}" TextColor="Black"/>
                                     <Label Text="{Binding Detail}"/>
                                 </StackLayout>

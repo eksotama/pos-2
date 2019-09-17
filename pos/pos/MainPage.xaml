@@ -12,7 +12,6 @@
         <Button Text="Productos" Clicked="Go_To_Products_List_Page"/>
         <Button Text="Ventas" Clicked="Go_To_Sells_Page"/>
         <Button Text="Reportes" Clicked="Go_To_Reports_Page"/>
-        <Button Text="Camara" Clicked="Go_To_Camera_Page"/>
     </StackLayout>
 
 </ContentPage>

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,23 +14,24 @@ namespace pos
 
         private async void Register_Client(object sender, EventArgs e)
         {
-            string name = Name_Entry.Text;
-            string address = Address_Entry.Text;
-            string phone = Phone_Entry.Text;
-            string email = Email_Entry.Text;
-            string photo = Photo_Entry.Text;
-
             Client client = new Client
             {
-                Name = name,
-                Address = address,
-                Phone = phone,
-                Email = email,
-                Profile_Url = photo
+                Name = Name_Entry.Text,
+                Address = Address_Entry.Text,
+                Phone = Phone_Entry.Text,
+                Email = Email_Entry.Text,
+                Profile_Url = Photo_Entry.Text
             };
 
             client.Insert();
             await Application.Current.MainPage.Navigation.PopAsync();
+        }
+
+        private async void TakePicture_Clicked(object sender, EventArgs e)
+        {
+            string imagePath = await Camera.TakePhoto("clients");
+            Profile.Source = imagePath;
+            Photo_Entry.Text = imagePath;
         }
     }
 }

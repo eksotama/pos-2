@@ -37,10 +37,5 @@ namespace pos
         {
             await Navigation.PushAsync(new Reports());
         }
-
-        private async void Go_To_Camera_Page(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Camera());
-        }
     }
 }

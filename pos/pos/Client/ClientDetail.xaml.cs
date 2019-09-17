@@ -27,6 +27,7 @@ namespace pos
             Address_Entry.Text = Client_Info.Address;
             Phone_Entry.Text = Client_Info.Phone;
             Photo_Entry.Text = Client_Info.Profile_Url;
+            Profile.Source = Client_Info.Profile_Url;
         }
 
         private void Update_Client(object sender, EventArgs e)
@@ -55,6 +56,13 @@ namespace pos
         private async void Return_To_List()
         {
             await Application.Current.MainPage.Navigation.PopAsync();
+        }
+
+        private async void TakePicture_Clicked(object sender, EventArgs e)
+        {
+            string imagePath = await Camera.TakePhoto("clients");
+            Profile.Source = imagePath;
+            Photo_Entry.Text = imagePath;
         }
     }
 }
