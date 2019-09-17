@@ -32,7 +32,9 @@
                                FontSize="Medium" 
                                x:Name="Photo_Entry" 
                                Grid.Row="0" 
-                               Grid.Column="0"/>
+                               Grid.Column="0"
+                               Completed="Photo_Entry_Completed"
+                               Unfocused="Photo_Entry_Unfocused"/>
                         <ImageButton Source="camera.png" 
                              Padding="10"
                              Aspect="AspectFit"

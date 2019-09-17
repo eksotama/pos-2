@@ -25,7 +25,7 @@
                             <ColumnDefinition Width="2*" />
                         </Grid.ColumnDefinitions>
 
-                        <Entry Placeholder="Foto" FontSize="Medium" x:Name="Photo_Entry" Grid.Row="0" Grid.Column="0"/>
+                        <Entry Placeholder="Foto" FontSize="Medium" x:Name="Photo_Entry" Grid.Row="0" Grid.Column="0" Completed="Photo_Entry_Completed" Unfocused="Photo_Entry_Unfocused"/>
                         <ImageButton Source="camera.png" 
                              Padding="10"
                              Aspect="AspectFit"
