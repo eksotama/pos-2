@@ -23,6 +23,17 @@ namespace pos
 
         public string Photo_Path { get; set; }
 
+        public static float TotalEarnings
+        {
+            get
+            {
+                var db = PosDb.Connect();
+                float totalEarnings = db.Table<Sell>().ToList().Sum(sell => sell.Earnings);
+                db.Close();
+                return totalEarnings;
+            }
+        }
+
         private List<Sell> Get_Sells_From_Last_N_Days(int days)
         {
             var db = PosDb.Connect();
