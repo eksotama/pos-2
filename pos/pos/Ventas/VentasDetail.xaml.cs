@@ -37,8 +37,8 @@ namespace pos
 
             Product_Photo.Source = Product_Info.Photo_Url;
             Quantity.Text = Venta_Info.Amount.ToString();
-            Total.Text = Venta_Info.Total.ToString();
-            Earnings.Text = Venta_Info.Earnings.ToString();
+            Total.Text = $"${Venta_Info.Total.ToString()}";
+            Earnings.Text = $"${Venta_Info.Earnings.ToString()}";
             Picker_Productos.ItemsSource = Product_List.ConvertAll(product => $"{product.Name} - ${String.Format("{0:#.00}", product.Price)}");
             Picker_Clientes.ItemsSource = Client_List.ConvertAll(client => client.Name);
             Product_Photo.Source = Product_Info.Photo_Url;
@@ -52,8 +52,24 @@ namespace pos
 
         private void Update_Venta(object sender, EventArgs e)
         {
+            Product producto = Product_List[Picker_Productos.SelectedIndex];
+            Client cliente = Client_List[Picker_Clientes.SelectedIndex];
+            int cantidad = int.Parse(Quantity.Text);
 
+            int diff = Venta_Info.Amount - cantidad;
+
+            producto.Quantity += diff;
+            producto.Update();
+
+            Venta_Info.Client_Id = cliente.Id;
+            Venta_Info.Product_Id = producto.Id;
+            Venta_Info.Amount = cantidad;
+            Venta_Info.Total = producto.Price * cantidad;
+            Venta_Info.Earnings = (producto.Price - producto.Cost) * cantidad;
+            Venta_Info.Timestamp = DateTime.Now;
+            Venta_Info.Photo_Path = producto.Photo_Url;
             Venta_Info.Update();
+
             Return_To_List();
         }
 

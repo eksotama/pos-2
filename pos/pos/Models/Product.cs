@@ -17,5 +17,7 @@ namespace pos
         public float Price { get; set; }
 
         public float Cost { get; set; }
+
+        public string Color { get; set; }
     }
 }

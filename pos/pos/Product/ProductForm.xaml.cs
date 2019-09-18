@@ -21,14 +21,15 @@ namespace pos
                 int quantity = int.Parse(Quantity_Entry.Text);
                 float price = float.Parse(Price_Entry.Text);
                 float cost = float.Parse(Cost_Entry.Text);
-
+                Random rnd = new Random();
                 new Product
                 {
                     Name = name,
                     Cost = cost,
                     Price = price,
                     Photo_Url = photo,
-                    Quantity = quantity
+                    Quantity = quantity,
+                    Color = Color.FromRgb(rnd.Next(256), rnd.Next(256), rnd.Next(256)).ToHex().Substring(0, 7)
                 }.Insert();
 
                 await Application.Current.MainPage.Navigation.PopAsync();

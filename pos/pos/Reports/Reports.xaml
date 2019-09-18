@@ -26,16 +26,34 @@
                 <StackLayout Margin="0, 10">
                     <Label Text="Diarias" FontSize="Title"/>
                     <forms:ChartView x:Name="Daily_Chart" HeightRequest="300" />
+
+                    <Label Text="Costo de compra" FontSize="Large"/>
+                    <Label x:Name="Sells_cost_Daily"/>
+
+                    <Label Text="Total de Ganancias" FontSize="Large"/>
+                    <Label x:Name="Sells_earnings_Daily"/>
                 </StackLayout>
 
                 <StackLayout Margin="0, 10">
                     <Label Text="Semanales" FontSize="Title"/>
                     <forms:ChartView x:Name="Weekyly_Chart" HeightRequest="300" />
+
+                    <Label Text="Costo de compra" FontSize="Large"/>
+                    <Label x:Name="Sells_cost_Weekly"/>
+
+                    <Label Text="Total de Ganancias" FontSize="Large"/>
+                    <Label x:Name="Sells_earnings_Weekly"/>
                 </StackLayout>
 
                 <StackLayout Margin="0, 10">
                     <Label Text="Anuales" FontSize="Title"/>
                     <forms:ChartView x:Name="Annualy_Chart" HeightRequest="300" />
+
+                    <Label Text="Costo de compra" FontSize="Large"/>
+                    <Label x:Name="Sells_cost_Annual"/>
+
+                    <Label Text="Total de Ganancias" FontSize="Large"/>
+                    <Label x:Name="Sells_earnings_Annual"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

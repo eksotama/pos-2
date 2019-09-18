@@ -26,7 +26,7 @@
     <EmbeddedResource Update="Client\ClientForm.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ListPage.xaml">
+    <EmbeddedResource Update="Utils\ListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Product\ProductDetail.xaml">
@@ -38,10 +38,10 @@
     <EmbeddedResource Update="Reports\Reports.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="VentasDetail.xaml">
+    <EmbeddedResource Update="Ventas\VentasDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="VentasForm.xaml">
+    <EmbeddedResource Update="Ventas\VentasForm.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

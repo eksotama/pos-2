@@ -45,6 +45,9 @@ namespace pos
                 Photo_Path = producto.Photo_Url
             };
 
+            producto.Quantity -= cantidad;
+            producto.Update();
+
             sell.Insert();
             await Application.Current.MainPage.Navigation.PopAsync();
         }

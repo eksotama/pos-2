@@ -1,6 +1,7 @@
 ﻿using System;
 using Plugin.Media;
 using System.Threading.Tasks;
+using Plugin.Media.Abstractions;
 
 namespace pos
 {
@@ -8,10 +9,12 @@ namespace pos
     {
         public static async Task<string> TakePhoto(string directory)
         {
-            var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
+            var file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
             {
                 Directory = directory,
-                Name = $"{new DateTime().ToString()}.jpg"
+                Name = $"{new DateTime().ToString()}.jpg",
+                PhotoSize = PhotoSize.Small,
+                CompressionQuality = 80
             });
 
             return file == null ? "" : file.Path;
