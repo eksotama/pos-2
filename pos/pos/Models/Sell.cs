@@ -19,6 +19,7 @@ namespace pos
         public float Total { get; set; }
 
         public float Earnings { get; set; }
+        
         public DateTime Timestamp { get; set; }
 
         public static float TotalEarnings
