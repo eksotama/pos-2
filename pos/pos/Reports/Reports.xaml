@@ -3,13 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              mc:Ignorable="d"
-             x:Class="pos.Reports">
+             x:Class="pos.Reports"
+             Title="Ganancias">
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Reports!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <ScrollView Padding="20">
+            <StackLayout>
+                <StackLayout Margin="0, 10">
+                    <Label Text="Ganancias totales" 
+                           FontSize="Title"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Label x:Name="Total_Earnings"
+                           FontSize="Header" 
+                           Text="$0.00" 
+                           HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+                <StackLayout Margin="0, 10">
+                    <Label Text="Diarias" FontSize="Title"/>
+                    <forms:ChartView x:Name="Daily_Chart" HeightRequest="300" />
+                </StackLayout>
+
+                <StackLayout Margin="0, 10">
+                    <Label Text="Semanales" FontSize="Title"/>
+                    <forms:ChartView x:Name="Weekyly_Chart" HeightRequest="300" />
+                </StackLayout>
+
+                <StackLayout Margin="0, 10">
+                    <Label Text="Anuales" FontSize="Title"/>
+                    <forms:ChartView x:Name="Annualy_Chart" HeightRequest="300" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
     </ContentPage.Content>
+
 </ContentPage>
