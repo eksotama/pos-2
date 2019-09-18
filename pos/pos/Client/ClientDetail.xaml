@@ -51,9 +51,7 @@
                     </Grid>
                 </StackLayout>
             </StackLayout>
-
         </ScrollView>
-
     </ContentPage.Content>
 
 </ContentPage>

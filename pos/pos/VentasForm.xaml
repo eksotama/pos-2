@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="pos.VentasForm">
+    <ContentPage.Content>
+        <ScrollView Padding="20">
+            <StackLayout>
+                <Label Text="Total" HorizontalOptions="Center" FontSize="Large"/>
+                <Label x:Name="Total" HeightRequest="100" FontSize="84" Text="$0.00" TextColor="Green" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <StackLayout Margin="0, 20">
+                    <Picker x:Name="Picker_Clientes" Title="Cliente">
+                        <Picker.Items>
+
+                        </Picker.Items>
+                    </Picker>
+
+                    <Picker x:Name="Picker_Productos" Title="Producto" SelectedIndexChanged="Picker_Productos_SelectedIndexChanged">
+                        <Picker.Items>
+
+                        </Picker.Items>
+                    </Picker>
+
+                    <Entry Placeholder="Cantidad" FontSize="Medium" x:Name="Quantity_Entry" Keyboard="Numeric" Text="1" TextChanged="Quantity_Entry_TextChanged"/>
+
+                    <Button Text="Registrar Venta" BackgroundColor="Accent" TextColor="White" Clicked="Register_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
