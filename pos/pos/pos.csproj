@@ -38,10 +38,10 @@
     <EmbeddedResource Update="Reports\Reports.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Ventas\VentasDetail.xaml">
+    <EmbeddedResource Update="VentasDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Ventas\VentasForm.xaml">
+    <EmbeddedResource Update="VentasForm.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

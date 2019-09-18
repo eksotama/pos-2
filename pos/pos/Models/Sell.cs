@@ -20,6 +20,8 @@ namespace pos
         public float Earnings { get; set; }
         public DateTime Timestamp { get; set; }
 
+        public string Photo_Path { get; set; }
+
         private List<Sell> Get_Sells_From_Last_N_Days(int days)
         {
             var db = PosDb.Connect();

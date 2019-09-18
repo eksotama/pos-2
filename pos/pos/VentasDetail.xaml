@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="pos.VentasDetail">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="MenuItem1" Order="Primary" Icon="tick.png" Text="Guardar" Priority="0" Clicked="Update_Venta"/>
+        <ToolbarItem Name="MenuItem1" Order="Primary" Icon="delete.png" Text="Borrar" Priority="1" Clicked="Delete_Venta"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+
+        <ScrollView Padding="20">
+            <StackLayout>
+                <Image x:Name="Product_Photo" HeightRequest="200" />
+
+                <StackLayout Margin="0, 20">
+                    <Picker x:Name="Picker_Clientes" Title="Cliente">
+                        <Picker.Items>
+
+                        </Picker.Items>
+                    </Picker>
+
+                    <Picker x:Name="Picker_Productos" Title="Producto" SelectedIndexChanged="Picker_Productos_SelectedIndexChanged">
+                        <Picker.Items>
+
+                        </Picker.Items>
+                    </Picker>
+
+                    <Entry FontSize="Medium" x:Name="Quantity" Keyboard="Numeric"/>
+
+                    <Label FontSize="Large" Text="Total:"/>
+                    <Label FontSize="Medium" x:Name="Total"/>
+
+                    <Label FontSize="Large" Text="Ganancias:"/>
+                    <Label FontSize="Medium" x:Name="Earnings"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
